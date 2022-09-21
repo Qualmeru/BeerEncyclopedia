@@ -1,0 +1,13 @@
+**/.DS_Store
+**/.vs
+**/*.csproj.user
+**/bin
+**/obj
+.idea
+**/node_modules
+**/TestResult
+.env
+launch.json
+.history
+**/.vscode
+dist

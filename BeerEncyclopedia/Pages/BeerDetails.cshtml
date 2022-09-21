@@ -1,0 +1,33 @@
+﻿@page
+@model BeerEncyclopedia.Pages.BeerDetailsModel
+@{
+
+    <div>
+        @{
+            if (Model.AlcoholModel != null && Model.AlcoholModel.Alcohol != null)
+            {
+                var alcohol = Model.AlcoholModel.Alcohol;
+                <div class="searchItem">
+                    <h5>Name</h5>
+                    <p>@alcohol.Name</p>
+                    <img src="@alcohol.Image_url" class="alcoholImageLg" />
+                    <h5>Alcohol By Volume: </h5>
+                    <p>@alcohol.Abv</p>
+                    <h5>Description</h5>
+                    <p>@alcohol.Description</p>
+                    @{
+                        if (alcohol.Food_pairing != null)
+                        {
+                            <div><b>Dishes that go well with the beer:</b></div>
+                            foreach (var food_pair in alcohol.Food_pairing)
+                            {
+                                <p> @food_pair</p>
+                            }
+                        }
+                    }
+                    <p></p>
+                </div>
+            }
+        }
+    </div>
+}

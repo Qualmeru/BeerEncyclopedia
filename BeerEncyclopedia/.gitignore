@@ -1,0 +1,12 @@
+.DS_Store
+.vs
+BeerEncyclopedia.csproj.user
+bin
+obj
+.idea
+node_modules
+.env
+launch.json
+.history
+.vscode
+dist
